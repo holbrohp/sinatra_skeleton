@@ -1,0 +1,16 @@
+<div class="container">
+	<h3>Welcome to the game</h3>
+	<h6>You are playing with the <%= @deck.name %> deck</h6>
+	<div id="success"></div>
+	<ul>
+		<% @deck.cards.each do |card| %>
+		<form class="game_form" action="/deck/<%=@deck.id%>/card/<%=card.id%>" method="POST">
+			<li><%= card.question %></li><br>
+			<input id="user_guess" type="text" placeholder="Your Guess"><br>
+			<input type="submit" value="Submit your Guess">
+		</form>
+		<% end %>
+	</ul>
+</form>
+
+</div>

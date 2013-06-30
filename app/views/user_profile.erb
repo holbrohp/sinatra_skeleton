@@ -1,0 +1,7 @@
+<h2>Welcome: <%= @user.name %></h2>
+<p><a href="/logout">logout</a>
+<ul>
+<% @decks.each do |deck| %>
+  <li><a href="/deck/<%="#{deck.id}"%>"><%= deck.name %></a></li>
+<% end %>
+</ul>
